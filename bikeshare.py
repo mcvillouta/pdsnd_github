@@ -33,7 +33,7 @@ def get_filters():
         month = input("Type month (January, February, March, April, May or June) to filter by or type 'all' for no filter")
         if month.lower() in MONTH_LIST or month.lower() == 'all':
             break
-        print("ERROR: Input was not a month from January to June nor all.")
+        print("ERROR: Input was not a month from January to June nor all. Please try again.")
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
