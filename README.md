@@ -5,7 +5,7 @@
 Bikeshare Project
 
 ### Description
-Provides basic statistics for bikeshare data for the cities of New York, Chicago, and Washington.
+Provides basic statistics for bikeshare data for the cities of New York, Chicago, and Washington. Provides age, gender and station stats.
 
 ### Files used
 bikeshare.py

@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import datetime
 
-CITY_DATA = { 'chicago': 'chicago.csv',
+CITY_DATA = { 'chicago': 'chicago.csv', 
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 MONTH_LIST = {'january': 1, 'february': 2, 'march': 3, 'april': 4, 'may': 5, 'june': 6}
@@ -89,19 +89,19 @@ def time_stats(df):
     month_max = aux.idxmax()
     month_max_cnt = aux.max()
     print("Most common month was {} with {} trips.".format(MONTH_LIST_INV[month_max], month_max_cnt))
-    
+
     # display the most common day of week
     aux = df[['Day of Week','Start Time']].groupby('Day of Week').count()['Start Time']
     day_max = aux.idxmax()
     day_max_cnt = aux.max()
     print("Most common day of the week was {} with {} trips.".format(DAY_LIST_INV[day_max], day_max_cnt))
-    
+
     # display the most common start hour
     aux = df[['Start Hour','Start Time']].groupby('Start Hour').count()['Start Time']
     hour_max = aux.idxmax()
     hour_max_cnt = aux.max()
     print("Most common start hour was {} with {} trips.".format(str(hour_max)+":00", hour_max_cnt))
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -194,7 +194,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    
+
 def raw_data(df):
     """Displays raw data (trips sample)."""
 
